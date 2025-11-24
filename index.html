@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Khavanekar - iOS Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        
+        .nav-item:hover,
+        .nav-item.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #3498db;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .app-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .app-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .policy-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.show {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .container {
+                padding: 20px 10px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Aditya Khavanekar</div>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-item active" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" class="nav-item" onclick="showSection('contact')">Contact Us</a></li>
+                <li><a href="#" class="nav-item" onclick="showSection('privacy')">Privacy Policy</a></li>
+                <li><a href="#" class="nav-item" onclick="showSection('terms')">Terms of Use</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <div class="hero">
+                <!-- You can add your photo here -->
+                <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #3498db, #2c3e50); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">AK</div>
+                <h1>Hi, I'm Aditya Khavanekar</h1>
+                <p style="font-size: 1.2rem; color: #7f8c8d; margin-bottom: 30px;">iOS Developer & Tech Enthusiast</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    I'm passionate about creating innovative iOS applications that solve real-world problems. 
+                    With a focus on cutting-edge technology like AI and machine learning, I develop apps 
+                    that are not only functional but also delightful to use.
+                </p>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    My apps combine modern design principles with powerful technology to deliver exceptional 
+                    user experiences. I believe in creating software that makes people's lives easier and more productive.
+                </p>
+            </div>
+
+            <h2>My iOS Apps</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>🚗 Motor AI - Car Identifier</h3>
+                    <p><strong>AI-Powered Vehicle Recognition</strong></p>
+                    <p>Revolutionary app that uses advanced artificial intelligence to instantly identify any car. 
+                    Simply point your camera or select a photo to get comprehensive vehicle specifications, 
+                    performance data, and market information.</p>
+                    <p><strong>Features:</strong> Camera scanning, photo library support, detailed specifications, 
+                    favorites, scan history, dual AI engines</p>
+                </div>
+                
+                <div class="app-card" style="border-left-color: #95a5a6; background: #f1f2f6;">
+                    <h3>🚀 More Apps Coming Soon</h3>
+                    <p>I'm constantly working on new innovative applications that leverage the latest technology 
+                    to solve everyday problems. Stay tuned for exciting releases!</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                <h3>Get in Touch</h3>
+                <p>Have questions about my apps or want to collaborate? Feel free to reach out!</p>
+                <button onclick="showSection('contact')" style="background: #3498db; color: white; padding: 12px 24px; border: none; border-radius: 25px; margin-top: 15px; cursor: pointer; font-weight: 600;">Contact Me</button>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h1>Contact Us</h1>
+            <p>Have questions, feedback, or need support? I'd love to hear from you!</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell me about your question, feedback, or issue..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3>Alternative Contact</h3>
+                <p>You can also reach me directly at:</p>
+                <a href="mailto:adityakhavanekar98@gmail.com" style="color: #3498db; text-decoration: none; font-weight: 600;">adityakhavanekar98@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div id="privacy" class="section">
+            <h1>Privacy Policy for iOS Apps</h1>
+            
+            <div class="policy-section">
+                <h3>Effective Date</h3>
+                <p>This Privacy Policy is effective as of <strong>November 23, 2024</strong> and was last updated on November 23, 2024.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Information We Collect</h3>
+                <p>We are committed to protecting your privacy. Our apps may collect the following types of information:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Camera/Photo Data:</strong> Images you capture or select for processing within our apps</li>
+                    <li><strong>Usage Analytics:</strong> App usage statistics to improve performance and user experience</li>
+                    <li><strong>Device Information:</strong> Basic device and iOS version information for compatibility</li>
+                    <li><strong>Subscription Data:</strong> Purchase and subscription information managed by Apple</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>How We Use Your Information</h3>
+                <p>The information we collect is used to:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Provide core app functionality (such as AI-powered car recognition)</li>
+                    <li>Improve app performance and fix bugs</li>
+                    <li>Understand how our apps are used to enhance user experience</li>
+                    <li>Provide customer support when requested</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Advertising</h3>
+                <p>Our apps do not currently display third-party advertisements. If this changes in the future, we will update this privacy policy accordingly and ensure that any advertising partners comply with privacy standards.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your information:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Images processed for AI recognition are not permanently stored on our servers</li>
+                    <li>Data transmission is encrypted using industry-standard protocols</li>
+                    <li>We follow Apple's security guidelines and best practices</li>
+                    <li>Access to user data is limited to essential app functionality only</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Sharing of Information</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. Limited sharing may occur only in these circumstances:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>AI Processing:</strong> Images may be sent to AI service providers for recognition processing</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+                    <li><strong>Service Providers:</strong> Trusted partners who assist in app operation (under strict privacy agreements)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>The "Last Updated" date will be revised</li>
+                    <li>Significant changes will be communicated through app updates</li>
+                    <li>Continued use of our apps constitutes acceptance of the updated policy</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:adityakhavanekar98@gmail.com" style="color: #3498db;">adityakhavanekar98@gmail.com</a></p>
+                <p>We will respond to your privacy-related inquiries within a reasonable timeframe.</p>
+            </div>
+        </div>
+
+        <!-- Terms of Use Section -->
+        <div id="terms" class="section">
+            <h1>Terms of Use</h1>
+            
+            <div class="policy-section">
+                <h3>Acceptance of Terms</h3>
+                <p>By downloading, installing, or using any of our iOS applications, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our apps.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>App Store Terms</h3>
+                <p>Your use of our apps is also governed by Apple's App Store Terms of Service. In case of conflict between these terms and Apple's terms, Apple's terms shall prevail.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Subscription Terms</h3>
+                <p>For subscription-based apps:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Free trials automatically convert to paid subscriptions unless canceled</li>
+                    <li>Subscriptions automatically renew unless turned off at least 24 hours before the current period ends</li>
+                    <li>You can manage subscriptions in your Apple ID account settings</li>
+                    <li>Refunds are handled according to Apple's refund policy</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Acceptable Use</h3>
+                <p>You agree to use our apps only for lawful purposes and in accordance with these terms. You may not:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Use the apps for any illegal or unauthorized purpose</li>
+                    <li>Attempt to reverse engineer or modify the apps</li>
+                    <li>Use the apps to violate any third-party rights</li>
+                    <li>Interfere with the security or operation of the apps</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Intellectual Property</h3>
+                <p>All content, features, and functionality of our apps are owned by Aditya Khavanekar and are protected by copyright, trademark, and other intellectual property laws.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Limitation of Liability</h3>
+                <p>Our apps are provided "as is" without warranties of any kind. We shall not be liable for any damages arising from the use of our apps, including but not limited to direct, indirect, incidental, or consequential damages.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting. Your continued use of the apps constitutes acceptance of any changes.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Contact Information</h3>
+                <p>For questions about these Terms of Use, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:adityakhavanekar98@gmail.com" style="color: #3498db;">adityakhavanekar98@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav item
+            event.target.classList.add('active');
+            
+            // Close mobile menu
+            document.getElementById('nav-menu').classList.remove('show');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link with form data
+            const mailtoLink = `mailto:adityakhavanekar98@gmail.com?subject=${encodeURIComponent(subject || 'Contact from Website')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your message! Your email client will open to send the message.');
+        }
+
+        // Set active nav item based on current section
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstNavItem = document.querySelector('.nav-item');
+            if (firstNavItem) {
+                firstNavItem.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
