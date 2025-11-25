@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKApps - iOS & Web Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: #3498db;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 30px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .hero .geeky-line {
+            font-size: 1.1rem;
+            color: #3498db;
+            font-style: italic;
+            padding: 15px 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .apps-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .apps-section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .app-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 15px;
+        }
+
+        .app-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .app-card p {
+            color: #7f8c8d;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AKApps</a>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-item active">Home</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                <li><a href="privacy.html" class="nav-item">Motor AI Privacy Policy</a></li>
+                <li><a href="terms.html" class="nav-item">Motor AI Terms of Use</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero-icon">AK</div>
+            <h1>AKApps</h1>
+            <p class="tagline">I build iOS apps and web apps</p>
+            <p class="geeky-line">// I don't always test my code, but when I do, I do it in production 🚀</p>
+
+            <div class="apps-section">
+                <h2>My Apps</h2>
+                <div class="app-card">
+                    <h3>🚗 Motor AI</h3>
+                    <p>AI-powered car identification app. Point your camera at any car and instantly get detailed specs, performance data, and market information.</p>
+                </div>
+                <div class="app-card">
+                    <h3>🚀 More Coming Soon...</h3>
+                    <p>Always cooking up something new. Stay tuned!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 AKApps. Built with ☕ and mass amounts of caffeine.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

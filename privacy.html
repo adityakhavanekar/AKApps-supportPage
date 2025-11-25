@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Motor AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: #3498db;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .policy-section h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+        }
+
+        .policy-section a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .policy-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AKApps</a>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                <li><a href="privacy.html" class="nav-item active">Motor AI Privacy Policy</a></li>
+                <li><a href="terms.html" class="nav-item">Motor AI Terms of Use</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Motor AI - Last Updated: November 23, 2024</p>
+
+            <div class="policy-section">
+                <h3>Introduction</h3>
+                <p>This Privacy Policy explains how Motor AI ("we", "us", or "our") collects, uses, and protects your information when you use our iOS application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Information We Collect</h3>
+                <p>We are committed to protecting your privacy. Our app may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Camera/Photo Data:</strong> Images you capture or select for processing within our app</li>
+                    <li><strong>Usage Analytics:</strong> App usage statistics to improve performance and user experience</li>
+                    <li><strong>Device Information:</strong> Basic device and iOS version information for compatibility</li>
+                    <li><strong>Subscription Data:</strong> Purchase and subscription information managed by Apple</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>How We Use Your Information</h3>
+                <p>The information we collect is used to:</p>
+                <ul>
+                    <li>Provide core app functionality (AI-powered car recognition)</li>
+                    <li>Improve app performance and fix bugs</li>
+                    <li>Understand how our app is used to enhance user experience</li>
+                    <li>Provide customer support when requested</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>AI Processing</h3>
+                <p>When you use the car identification feature:</p>
+                <ul>
+                    <li>Images are sent to AI service providers (Google Gemini or OpenAI) for recognition processing</li>
+                    <li>Images are processed in real-time and are not permanently stored on external servers</li>
+                    <li>Results are returned to your device and stored locally if you choose to save them</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Storage</h3>
+                <p>Your data is stored as follows:</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> Scan history and favorites are stored locally on your device using CoreData</li>
+                    <li><strong>iCloud:</strong> If enabled, data may sync via iCloud according to your device settings</li>
+                    <li><strong>We do not maintain servers</strong> that store your personal car scan data</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Advertising</h3>
+                <p>Our app does not currently display third-party advertisements. If this changes in the future, we will update this privacy policy accordingly and ensure that any advertising partners comply with privacy standards.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your information:</p>
+                <ul>
+                    <li>Images processed for AI recognition are not permanently stored on external servers</li>
+                    <li>Data transmission is encrypted using industry-standard protocols (HTTPS/TLS)</li>
+                    <li>We follow Apple's security guidelines and best practices</li>
+                    <li>Access to user data is limited to essential app functionality only</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Sharing of Information</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. Limited sharing may occur only in these circumstances:</p>
+                <ul>
+                    <li><strong>AI Processing:</strong> Images are sent to AI service providers for recognition processing</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+                    <li><strong>Service Providers:</strong> Trusted partners who assist in app operation (under strict privacy agreements)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Delete your locally stored data by uninstalling the app</li>
+                    <li>Clear your scan history and favorites within the app</li>
+                    <li>Deny camera or photo library permissions at any time via iOS Settings</li>
+                    <li>Request information about what data we process</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Children's Privacy</h3>
+                <p>Our app is not directed to children under 13. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+                <ul>
+                    <li>The "Last Updated" date will be revised</li>
+                    <li>Significant changes will be communicated through app updates</li>
+                    <li>Continued use of our app constitutes acceptance of the updated policy</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:adityakhavanekar98@gmail.com">adityakhavanekar98@gmail.com</a></p>
+                <p>We will respond to your privacy-related inquiries within a reasonable timeframe.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 AKApps. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

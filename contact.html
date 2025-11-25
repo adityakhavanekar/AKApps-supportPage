@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AKApps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: #3498db;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .direct-email {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .direct-email p {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .direct-email a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .direct-email a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AKApps</a>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="contact.html" class="nav-item active">Contact Us</a></li>
+                <li><a href="privacy.html" class="nav-item">Motor AI Privacy Policy</a></li>
+                <li><a href="terms.html" class="nav-item">Motor AI Terms of Use</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p class="subtitle">Have questions, feedback, or just want to say hi? Drop me a message!</p>
+
+            <form action="https://formsubmit.co/adityakhavanekar98@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from AKApps website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://adityakhavanekar.github.io/AKApps-supportPage/contact.html">
+
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="What's on your mind?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="direct-email">
+                <p>Or email me directly at:</p>
+                <a href="mailto:adityakhavanekar98@gmail.com">adityakhavanekar98@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 AKApps. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
