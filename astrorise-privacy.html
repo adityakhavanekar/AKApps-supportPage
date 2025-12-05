@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AstroRise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: #9b59b6;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #9b59b6;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #9b59b6;
+        }
+
+        .policy-section h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+        }
+
+        .policy-section a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        .policy-section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #f3e5f5;
+            border: 1px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AKApps</a>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                <li><a href="motorai-privacy.html" class="nav-item">Motor AI Privacy</a></li>
+                <li><a href="motorai-terms.html" class="nav-item">Motor AI Terms</a></li>
+                <li><a href="astrorise-privacy.html" class="nav-item active">AstroRise Privacy</a></li>
+                <li><a href="astrorise-terms.html" class="nav-item">AstroRise Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">AstroRise - Last Updated: December 4, 2024</p>
+
+            <div class="policy-section">
+                <h3>Introduction</h3>
+                <p>This Privacy Policy explains how AstroRise ("we", "us", or "our") collects, uses, and protects your information when you use our iOS application. AstroRise is a personalized astrology app that provides Vedic astrology readings, palmistry analysis, tarot guidance, and daily cosmic insights. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+            </div>
+
+            <div class="policy-section" style="border-left-color: #ff9800; background: #fff3e0;">
+                <h3>Entertainment Purposes Disclaimer</h3>
+                <p><strong>Important:</strong> AstroRise is designed for entertainment and personal reflection purposes only. All astrological readings, palmistry analysis, tarot interpretations, compatibility reports, and other content provided by this App:</p>
+                <ul>
+                    <li>Are for <strong>entertainment purposes only</strong> and should not be taken as factual predictions</li>
+                    <li>Should <strong>NOT</strong> be used as a substitute for professional advice (medical, financial, legal, or psychological)</li>
+                    <li>Are generated by artificial intelligence and are <strong>not scientifically verified</strong></li>
+                    <li>Should <strong>NOT</strong> be the sole basis for making important life decisions</li>
+                    <li>Are personalized interpretations based on traditional astrological systems, not empirical predictions</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>We do not guarantee the accuracy of any readings.</strong> By using AstroRise, you acknowledge that you understand the entertainment nature of this service and will not hold us responsible for any decisions made based on the content provided.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Information We Collect</h3>
+                <p>To provide personalized astrology services, our app collects the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Your name, date of birth, and relationship status - used to calculate your Vedic zodiac sign (Rashi) and generate personalized readings</li>
+                    <li><strong>Palm Images:</strong> Photos of your left and right palms captured during onboarding for palmistry analysis</li>
+                    <li><strong>Usage Data:</strong> App usage patterns, completed daily tasks, streak information, and feature interactions</li>
+                    <li><strong>Device Information:</strong> Basic device and iOS version information for compatibility and troubleshooting</li>
+                    <li><strong>Subscription Data:</strong> Purchase and subscription information managed by Apple</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Important Note on Palm Images:</strong>
+                    <p style="margin-top: 8px;">Palm images are considered sensitive biometric data. We take extra precautions to protect this information. Your palm images are stored locally on your device and are only transmitted securely to our AI provider for analysis during the initial onboarding process.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h3>How We Use Your Information</h3>
+                <p>The information we collect is used to:</p>
+                <ul>
+                    <li>Calculate your Vedic zodiac sign (Rashi) and Nakshatra based on your date of birth</li>
+                    <li>Generate personalized palmistry readings from your palm images</li>
+                    <li>Provide daily cosmic energy readings, mantras, and personalized tasks</li>
+                    <li>Create compatibility reports with partners</li>
+                    <li>Generate tarot card interpretations aligned with your profile</li>
+                    <li>Track your daily task completion and maintain streak statistics</li>
+                    <li>Unlock achievements and badges based on your app usage</li>
+                    <li>Improve app performance and user experience</li>
+                    <li>Provide customer support when requested</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>AI Processing</h3>
+                <p>AstroRise uses artificial intelligence to generate personalized readings:</p>
+                <ul>
+                    <li><strong>AI Provider:</strong> We use Google Gemini AI to process your information and generate readings</li>
+                    <li><strong>Data Transmitted:</strong> Your name, date of birth, relationship status, and palm images are securely sent to the AI for analysis</li>
+                    <li><strong>Processing:</strong> Data is processed in real-time to generate your personalized readings</li>
+                    <li><strong>No Permanent External Storage:</strong> Your personal data is not permanently stored on external AI servers - it is processed and returned immediately</li>
+                    <li><strong>Daily Updates:</strong> For daily readings, only your name, Rashi, and date of birth are sent (not palm images)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Storage</h3>
+                <p>Your data is stored as follows:</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> All your data including palm images, readings, profile information, streak data, and badges are stored locally on your device using Apple's CoreData framework</li>
+                    <li><strong>Palm Image Security:</strong> Palm images are stored with external binary storage for enhanced security</li>
+                    <li><strong>No Cloud Sync:</strong> We do not sync your personal data to external cloud servers</li>
+                    <li><strong>We do not maintain servers</strong> that store your personal astrology data or palm images</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Retention</h3>
+                <p>Your data is retained as follows:</p>
+                <ul>
+                    <li><strong>Permanent Data:</strong> Your initial palmistry reading, life energies, and Rashi information are stored permanently on your device until you uninstall the app</li>
+                    <li><strong>Daily Data:</strong> Daily readings, tasks, and moon guidance are refreshed each day</li>
+                    <li><strong>Deletion:</strong> All data is permanently deleted when you uninstall the app from your device</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Advertising</h3>
+                <p>AstroRise does not display third-party advertisements. We offer a premium subscription model instead. If this changes in the future, we will update this privacy policy accordingly.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your information:</p>
+                <ul>
+                    <li>All data transmission to AI services uses HTTPS/TLS encryption</li>
+                    <li>Palm images are stored locally and never shared with third parties beyond AI processing</li>
+                    <li>We follow Apple's security guidelines and best practices</li>
+                    <li>No personal data is stored on external servers permanently</li>
+                    <li>Access to your data is limited to essential app functionality only</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Sharing of Information</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. Limited sharing may occur only in these circumstances:</p>
+                <ul>
+                    <li><strong>AI Processing:</strong> Your data is sent to Google Gemini AI solely for generating personalized readings</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+                    <li><strong>Apple:</strong> Subscription and payment data is managed by Apple through the App Store</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li><strong>Delete All Data:</strong> Uninstall the app to permanently delete all your data from your device</li>
+                    <li><strong>Deny Permissions:</strong> Deny camera permissions at any time via iOS Settings (note: this will affect palmistry features)</li>
+                    <li><strong>Access Information:</strong> Contact us to request information about what data we process</li>
+                    <li><strong>Start Fresh:</strong> Use the logout/reset feature in the app to clear your data and start over</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Children's Privacy</h3>
+                <p>AstroRise is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe we have collected information from a child under 13, please contact us immediately at the email below, and we will take steps to delete such information.</p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Third-Party Services</h3>
+                <p>AstroRise integrates with the following third-party services:</p>
+                <ul>
+                    <li><strong>Google Gemini AI:</strong> For generating personalized astrology readings (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
+                    <li><strong>Apple App Store:</strong> For subscription management and payments (<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+                <ul>
+                    <li>The "Last Updated" date at the top will be revised</li>
+                    <li>Significant changes will be communicated through app updates</li>
+                    <li>Continued use of AstroRise after changes constitutes acceptance of the updated policy</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, our data practices, or wish to exercise your privacy rights, please contact us at:</p>
+                <p><strong>Developer:</strong> Aditya Khavanekar</p>
+                <p><strong>Email:</strong> <a href="mailto:adityakhavanekar98@gmail.com">adityakhavanekar98@gmail.com</a></p>
+                <p style="margin-top: 10px;">We will respond to your privacy-related inquiries within a reasonable timeframe.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 AKApps. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
