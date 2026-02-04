@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Motor AI</title>
+    <title>Privacy Policy - Drive Feed</title>
     <style>
         * {
             margin: 0;
@@ -183,9 +183,9 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-item">Home</a></li>
                 <li><a href="contact.html" class="nav-item">Contact Us</a></li>
-                <li><a href="motorai-privacy.html" class="nav-item active">Motor AI Privacy</a></li>
+                <li><a href="motorai-privacy.html" class="nav-item">Motor AI Privacy</a></li>
                 <li><a href="motorai-terms.html" class="nav-item">Motor AI Terms</a></li>
-                <li><a href="drivefeed-privacy.html" class="nav-item">Drive Feed Privacy</a></li>
+                <li><a href="drivefeed-privacy.html" class="nav-item active">Drive Feed Privacy</a></li>
                 <li><a href="drivefeed-terms.html" class="nav-item">Drive Feed Terms</a></li>
             </ul>
         </div>
@@ -194,18 +194,21 @@
     <div class="container">
         <div class="content">
             <h1>Privacy Policy</h1>
-            <p class="subtitle">Motor AI - Last Updated: November 23, 2024</p>
+            <p class="subtitle">Drive Feed - Last Updated: February 4, 2026</p>
 
             <div class="policy-section">
                 <h3>Introduction</h3>
-                <p>This Privacy Policy explains how Motor AI ("we", "us", or "our") collects, uses, and protects your information when you use our iOS application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+                <p>This Privacy Policy explains how Drive Feed ("we", "us", or "our") collects, uses, and protects your information when you use our iOS application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
             </div>
 
             <div class="policy-section">
                 <h3>Information We Collect</h3>
-                <p>We are committed to protecting your privacy. Our app may collect the following types of information:</p>
+                <p>Our app may collect the following types of information:</p>
                 <ul>
-                    <li><strong>Camera/Photo Data:</strong> Images you capture or select for processing within our app</li>
+                    <li><strong>Account Information:</strong> Phone number and username when you create an account</li>
+                    <li><strong>Camera/Photo Data:</strong> Images you capture or select for car identification</li>
+                    <li><strong>Location Data:</strong> Your location when you spot a car (used to tag where the car was spotted)</li>
+                    <li><strong>User-Generated Content:</strong> Captions, comments, and likes on car spots</li>
                     <li><strong>Usage Analytics:</strong> App usage statistics to improve performance and user experience</li>
                     <li><strong>Device Information:</strong> Basic device and iOS version information for compatibility</li>
                     <li><strong>Subscription Data:</strong> Purchase and subscription information managed by Apple</li>
@@ -216,9 +219,11 @@
                 <h3>How We Use Your Information</h3>
                 <p>The information we collect is used to:</p>
                 <ul>
-                    <li>Provide core app functionality (AI-powered car recognition)</li>
+                    <li>Provide core app functionality (AI-powered car recognition and social features)</li>
+                    <li>Display your car spots on the community feed</li>
+                    <li>Maintain leaderboard rankings and points system</li>
+                    <li>Tag car spots with location information</li>
                     <li>Improve app performance and fix bugs</li>
-                    <li>Understand how our app is used to enhance user experience</li>
                     <li>Provide customer support when requested</li>
                     <li>Comply with legal obligations</li>
                 </ul>
@@ -228,9 +233,9 @@
                 <h3>AI Processing</h3>
                 <p>When you use the car identification feature:</p>
                 <ul>
-                    <li>Images are sent to AI service providers (Google Gemini or OpenAI) for recognition processing</li>
-                    <li>Images are processed in real-time and are not permanently stored on external servers</li>
-                    <li>Results are returned to your device and stored locally if you choose to save them</li>
+                    <li>Images are sent to Google Gemini AI for car recognition processing</li>
+                    <li>Images are processed in real-time and are not permanently stored on AI servers</li>
+                    <li>Results (car make, model, specs) are returned to the app and saved to your profile</li>
                 </ul>
             </div>
 
@@ -238,22 +243,40 @@
                 <h3>Data Storage</h3>
                 <p>Your data is stored as follows:</p>
                 <ul>
-                    <li><strong>Local Storage:</strong> Scan history and favorites are stored locally on your device using CoreData</li>
-                    <li><strong>iCloud:</strong> If enabled, data may sync via iCloud according to your device settings</li>
-                    <li><strong>We do not maintain servers</strong> that store your personal car scan data</li>
+                    <li><strong>Cloud Storage:</strong> Account data, car spots, comments, and likes are stored on Firebase (Google Cloud) servers</li>
+                    <li><strong>Photo Storage:</strong> Car spot photos are stored on Firebase Storage</li>
+                    <li><strong>Data is associated with your account</strong> and accessible when you log in from any device</li>
+                    <li><strong>Account Deletion:</strong> You can delete your account and all associated data from the app settings</li>
                 </ul>
             </div>
 
             <div class="policy-section">
-                <h3>Advertising</h3>
-                <p>Our app does not currently display third-party advertisements. If this changes in the future, we will update this privacy policy accordingly and ensure that any advertising partners comply with privacy standards.</p>
+                <h3>Social Features</h3>
+                <p>Drive Feed includes social features where:</p>
+                <ul>
+                    <li>Your car spots (photo, car details, location, caption) are visible to all users on the feed</li>
+                    <li>Your username and points are visible on the leaderboard</li>
+                    <li>Other users can like and comment on your spots</li>
+                    <li>You can like and comment on other users' spots</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h3>Location Data</h3>
+                <p>We collect location data only when you use the scan feature:</p>
+                <ul>
+                    <li>Location is captured at the time of scanning to tag where the car was spotted</li>
+                    <li>Location is displayed publicly on your car spot posts</li>
+                    <li>You can deny location permissions, but you will not be able to use the scan feature</li>
+                    <li>We do not track your location in the background</li>
+                </ul>
             </div>
 
             <div class="policy-section">
                 <h3>Data Security</h3>
                 <p>We implement appropriate security measures to protect your information:</p>
                 <ul>
-                    <li>Images processed for AI recognition are not permanently stored on external servers</li>
+                    <li>Authentication is handled securely through Firebase Authentication</li>
                     <li>Data transmission is encrypted using industry-standard protocols (HTTPS/TLS)</li>
                     <li>We follow Apple's security guidelines and best practices</li>
                     <li>Access to user data is limited to essential app functionality only</li>
@@ -264,9 +287,10 @@
                 <h3>Sharing of Information</h3>
                 <p>We do not sell, trade, or rent your personal information to third parties. Limited sharing may occur only in these circumstances:</p>
                 <ul>
-                    <li><strong>AI Processing:</strong> Images are sent to AI service providers for recognition processing</li>
+                    <li><strong>AI Processing:</strong> Images are sent to Google Gemini for car recognition</li>
+                    <li><strong>Cloud Services:</strong> Data is stored on Firebase (Google Cloud) infrastructure</li>
+                    <li><strong>Public Content:</strong> Your car spots, username, and comments are visible to other app users</li>
                     <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
-                    <li><strong>Service Providers:</strong> Trusted partners who assist in app operation (under strict privacy agreements)</li>
                 </ul>
             </div>
 
@@ -274,10 +298,11 @@
                 <h3>Your Rights</h3>
                 <p>You have the right to:</p>
                 <ul>
-                    <li>Delete your locally stored data by uninstalling the app</li>
-                    <li>Clear your scan history and favorites within the app</li>
-                    <li>Deny camera or photo library permissions at any time via iOS Settings</li>
+                    <li>Delete your account and all associated data from app settings</li>
+                    <li>Delete individual car spots you have posted</li>
+                    <li>Deny camera, photo library, or location permissions at any time via iOS Settings</li>
                     <li>Request information about what data we process</li>
+                    <li>Contact us to request data export or deletion</li>
                 </ul>
             </div>
 
@@ -305,7 +330,7 @@
         </div>
 
         <div class="footer">
-            <p>&copy; 2024 AKApps. All rights reserved.</p>
+            <p>&copy; 2026 AKApps. All rights reserved.</p>
         </div>
     </div>
 
